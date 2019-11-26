@@ -1,0 +1,5 @@
+name: Remove Cache Control Module
+description: A simple module to Remove cache_control
+core: 8.x
+package: Custom
+type: module
