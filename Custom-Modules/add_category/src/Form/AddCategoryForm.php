@@ -59,6 +59,16 @@ class AddCategoryForm extends FormBase {
       'name' => $catName, 
       'field_user_info' => $uid,
       'vid' => 'category',
+    ]);
+    $term->save();
+    //Retrieve the tid of the new term
+    $parent = $term->id();
+    $subcatName = "Default ".$catName;
+    $subTerm = Term::create([
+      'name' => $subcatName,
+      'field_user_info' => $uid,
+      'vid' => 'category',
+      'parent' => $parent,
     ])->save();
     \Drupal::messenger()->addMessage('Category Added');
     // foreach ($form_state->getValues() as $key => $value) {
