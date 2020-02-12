@@ -1,0 +1,14 @@
+add_category.add_category_form:
+  path: '/add_category'
+  defaults:
+    _form: '\Drupal\add_category\Form\AddCategoryForm'
+    _title: 'Add Category'
+  requirements:
+    _access: 'TRUE'
+add_category.add_sub_category:
+  path: '/add_sub_category'
+  defaults:
+    _form: '\Drupal\add_category\Form\AddSubCategory'
+    _title: 'AddSubCategory'
+  requirements:
+    _access: 'TRUE'

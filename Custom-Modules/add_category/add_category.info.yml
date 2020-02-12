@@ -1,0 +1,5 @@
+name: Add Category
+description: Add category and subcategory and save user information
+package: Custom
+type: module
+core: 8.x
